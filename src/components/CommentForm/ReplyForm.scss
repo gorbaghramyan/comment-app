@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.comment-form {
+    margin: 50px 100px;
+    font-family: "Roboto";
+    h1 {
+        margin: 0;
+    }
+    .input-field {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea, select {
+            border: none;
+            background-color: rgb(228, 228, 228);
+            padding: 5px 10px;
+        }
+        input {
+            min-height: 30px;
+        }
+        select {
+            min-height: 40px;
+            cursor: pointer;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+        label {
+            margin: 30px 0 10px;
+        }
+    }
+
+    .input-group {
+        display: flex;
+        justify-content: space-between;
+        .input-field {
+            width: 45%;
+        }
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    .button-group {
+        display: flex;
+        label {
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            input {
+                cursor: pointer;
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+        :first-child {
+            margin: 0;
+        }
+    }
+    input[type="submit"] {
+        margin-top: 20px;
+        padding: 15px 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+    }
+}

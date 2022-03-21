@@ -1,0 +1,59 @@
+.no-comment {
+    text-align: center;
+}
+
+.avatar {
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.comment {
+    display: flex;
+    font-family: Arial, "Roboto";
+    margin-bottom: 10px;
+
+    .comment-info {
+        padding: 5px 6px 8px 6px;
+        border-radius: 6px;
+        margin-right: 40px;
+        color: black;
+        background-color: #cacaca;
+        position: relative;
+        margin-left: 20px;
+        width: 100%;
+
+
+        :after {
+            content: "";
+            position: absolute;
+            margin-top: -11px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #cacaca;
+            transform: rotate(-90deg);
+            left: -18px;
+            top: 30px;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
+        .button-cont {
+            display: block;
+            float: right;
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
