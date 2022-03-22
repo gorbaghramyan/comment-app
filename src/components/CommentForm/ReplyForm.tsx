@@ -10,8 +10,6 @@ const CommentForm: React.FC<{ type: formType, comment?: IComment }> = ({ type, c
     register,
     handleSubmit,
     reset,
-    setValue,
-    watch,
     formState: { errors },
   } = useForm<IComment>();
 
