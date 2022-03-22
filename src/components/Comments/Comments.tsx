@@ -26,7 +26,7 @@ const Comments: React.FC = () => {
 
 const Comment = ({ comment }: { comment: IComment }) => {
   const date = new Date(comment.date);
-  const { deleteComment, editComment } = useActions();
+  const { deleteComment } = useActions();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   return (
