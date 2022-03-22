@@ -12,19 +12,8 @@
     display: flex;
     font-family: Arial, "Roboto";
     margin-bottom: 10px;
-
     .comment-info {
-        padding: 5px 6px 8px 6px;
-        border-radius: 6px;
-        margin-right: 40px;
-        color: black;
-        background-color: #cacaca;
-        position: relative;
-        margin-left: 20px;
-        width: 100%;
-
-
-        :after {
+        ::after {
             content: "";
             position: absolute;
             margin-top: -11px;
@@ -35,6 +24,16 @@
             left: -18px;
             top: 30px;
         }
+        padding: 5px 6px 8px 6px;
+        border-radius: 6px;
+        margin-right: 40px;
+        color: black;
+        background-color: #cacaca;
+        position: relative;
+        margin-left: 20px;
+        width: 100%;
+
+        
 
         p {
             margin-left: 20px;

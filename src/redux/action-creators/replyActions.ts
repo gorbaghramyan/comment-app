@@ -8,13 +8,20 @@ export const addComment = (comment: IComment) => {
     return (dispatch: Dispatch<CommentAction>) => {
         comment.id = uuid.v4();
         comment.date = Date.now();
-
+        if(!comment.checkboxes) {
+            comment.checkboxes = [];
+        }
+        
         dispatch({ type: CommentActionTypes.ADD_COMMENT, payload: comment });
     }
 }
 
 export const editComment = (comment: IComment) => {
     return (dispatch: Dispatch<CommentAction>) => {
+        if(!comment.checkboxes) {
+            comment.checkboxes = [];
+        }
+        
         dispatch({ type: CommentActionTypes.EDIT_COMMENT, payload: comment });
     }
 }

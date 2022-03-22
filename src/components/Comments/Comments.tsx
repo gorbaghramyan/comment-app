@@ -3,8 +3,10 @@ import { IComment } from "../../types/comment.interface";
 import avatar from "./../../assets/user.png";
 import edit from "./../../assets/edit.png";
 import deleteCom from "./../../assets/delete.png";
-import "./Comments.scss";
 import { useActions } from "../../hooks/useActions";
+import { useState } from "react";
+import Modal from "../Modal/Modal";
+import "./Comments.scss";
 
 const Comments: React.FC = () => {
   const comments = useSelector((state: IComment[]) => state);
@@ -25,6 +27,7 @@ const Comments: React.FC = () => {
 const Comment = ({ comment }: { comment: IComment }) => {
   const date = new Date(comment.date);
   const { deleteComment, editComment } = useActions();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   return (
     <div className="comment">
@@ -48,13 +51,16 @@ const Comment = ({ comment }: { comment: IComment }) => {
           <button onClick={() => deleteComment(comment.id)}>
             <img src={deleteCom} alt="delete" title="Delete" />
           </button>
-          <button>
+          <button onClick={() => setIsModalOpen(true)}>
             <img src={edit} alt="edit" title="Edit" />
           </button>
         </div>
       </div>
+          {isModalOpen ? <Modal comment={comment} setIsModalOpen={setIsModalOpen} /> : null}
     </div>
   );
 };
+
+
 
 export default Comments;
